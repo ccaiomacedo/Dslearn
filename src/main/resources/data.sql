@@ -13,3 +13,6 @@ INSERT INTO tb_user_role (user_id, role_id) VALUES (2, 2);
 INSERT INTO tb_user_role (user_id, role_id) VALUES (3, 1);
 INSERT INTO tb_user_role (user_id, role_id) VALUES (3, 2);
 INSERT INTO tb_user_role (user_id, role_id) VALUES (3, 3);
+
+
+INSERT INTO tb_course (name,img_URI,img_Gray_Uri) VALUES ('Bootcamp html','https://www.smartpassiveincome.com/wp-content/uploads/2020/04/How-to-Create-an-Online-Course.png','https://www.guiadasemana.com.br/contentFiles/image/2018/03/FEA/thumbnail/56626_w380h235_1519941526luzes.jpg');
