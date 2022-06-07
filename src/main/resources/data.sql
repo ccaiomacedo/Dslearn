@@ -19,3 +19,7 @@ INSERT INTO tb_course (name,img_URI,img_Gray_Uri) VALUES ('Bootcamp html','https
 
 INSERT INTO tb_offer (edition,start_Moment,end_Moment,course_id) VALUES ('1.0',TIMESTAMP WITH TIME ZONE '2020-07-13T03:00:00Z',TIMESTAMP WITH TIME ZONE'2022-08-13T03:00:00Z',1);
 INSERT INTO tb_offer (edition,start_Moment,end_Moment,course_id) VALUES ('2.0',TIMESTAMP WITH TIME ZONE '2020-09-13T03:00:00Z',TIMESTAMP WITH TIME ZONE'2022-10-13T03:00:00Z',1);
+
+INSERT INTO tb_resource (title,description,position,img_Uri,type,offer_id) VALUES ('Trilha HTML','Trilha principal do curso',1,'https://www.smartpassiveincome.com/wp-content/uploads/2020/04/How-to-Create-an-Online-Course.png',1,1);
+INSERT INTO tb_resource (title,description,position,img_Uri,type,offer_id) VALUES ('Forum','Tire suas dúvidas',2,'https://www.smartpassiveincome.com/wp-content/uploads/2020/04/How-to-Create-an-Online-Course.png',2,1);
+INSERT INTO tb_resource (title,description,position,img_Uri,type,offer_id) VALUES ('Lives','Lives exclusivas para a turma',3,'https://www.smartpassiveincome.com/wp-content/uploads/2020/04/How-to-Create-an-Online-Course.png',1,1);
