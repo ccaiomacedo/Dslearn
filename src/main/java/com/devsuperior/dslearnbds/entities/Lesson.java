@@ -2,12 +2,15 @@ package com.devsuperior.dslearnbds.entities;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @Entity
 @Table(name = "tb_lesson")
-@Inheritance(strategy = InheritanceType.JOINED)//por ser herança usar essa anotaçõa, o JOINED cria uma tabela pra cada classe que herdar essa
+@Inheritance(strategy = InheritanceType.JOINED)
+//por ser herança usar essa anotaçõa, o JOINED cria uma tabela pra cada classe que herdar essa
 public abstract class Lesson implements Serializable { //não pode ser instanciada
     private static final long serialVersionUID = 1L;
 
@@ -21,6 +24,9 @@ public abstract class Lesson implements Serializable { //não pode ser instancia
     @ManyToOne
     @JoinColumn(name = "section_id")
     private Section section;
+
+    @OneToMany(mappedBy = "lesson")
+    private List<Deliver> deliveries = new ArrayList<>();
 
     @ManyToMany()
     @JoinTable(name = "tb_lessons_done", joinColumns = @JoinColumn(name = "lesson_id"), inverseJoinColumns = {
@@ -74,4 +80,9 @@ public abstract class Lesson implements Serializable { //não pode ser instancia
     public Set<Enrollment> getEnrollmentsDone() {
         return enrollmentsDone;
     }
+
+    public List<Deliver> getDeliveries() {
+        return deliveries;
+    }
+
 }

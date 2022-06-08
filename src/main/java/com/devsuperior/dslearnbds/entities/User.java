@@ -24,7 +24,7 @@ public class User implements Serializable {
     private List<Notification> notifications = new ArrayList<>();
 
 
-    public User(){
+    public User() {
 
     }
 
@@ -70,6 +70,10 @@ public class User implements Serializable {
 
     public Set<Role> getRoles() {
         return roles;
+    }
+
+    public List<Notification> getNotifications() {
+        return notifications;
     }
 
     @Override
