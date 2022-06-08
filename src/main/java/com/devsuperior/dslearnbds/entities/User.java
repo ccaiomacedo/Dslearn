@@ -94,7 +94,7 @@ public class User implements Serializable, UserDetails {
     }
 
     @Override
-    public Collection<? extends GrantedAuthority> getAuthorities() { //retorna uma coleção do tipo grantedAuthority
+    public Collection<? extends GrantedAuthority> getAuthorities() {
         return roles.stream().map(role -> new SimpleGrantedAuthority(role.getAuthority())).collect(Collectors.toList());
     }
 
@@ -124,4 +124,12 @@ public class User implements Serializable, UserDetails {
         return true;
     }
 
+    public boolean hasHole(String roleName) {
+        for (Role role : roles) {
+            if (role.getAuthority().equals(roleName)) {
+                return true;
+            }
+        }
+        return false;
+    }
 }
